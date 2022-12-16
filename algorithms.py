@@ -69,7 +69,7 @@ def binary_search(list_of_values, value):
     pass
 
 def selection_sort(lst):
-     """
+    """
     Function for selection sort
     >>> selection_sort([7, 5, 8, 19, 13, 2, 2, 10])
     [2, 2, 5, 7, 8, 10, 13, 19]
