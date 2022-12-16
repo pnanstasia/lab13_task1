@@ -23,11 +23,13 @@ def linear_search(list_of_values, value):
             return index
 
 def merge_sort(lst):
-     """Merge sort
+    """
+    Merge sort
     >>> merge_sort([11, 2, 2, 5, 8, 5, 13, 9, 3, 3, 1, 1, 12, 4, 4, 6, 10])
     [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 8, 9, 10, 11, 12, 13]
     >>> merge_sort([1,1,1,1,3])
-    >>> merge_sort('3')"""
+    >>> merge_sort('3')
+    """
     if not isinstance(lst, list):
         return None
 
