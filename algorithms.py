@@ -85,7 +85,7 @@ def binary_search(list_of_values, value):
         elif list_of_values[midpoint] < value:
             the_lowest = midpoint + 1
         else:
-            the_highest = midpoint + 1
+            the_highest = midpoint - 1
     return -1
     
 
