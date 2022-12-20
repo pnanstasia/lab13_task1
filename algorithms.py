@@ -111,8 +111,8 @@ def selection_sort(lst):
             if i <= min_el:
                 min_el = i
                 # Розділяйте оператори пробілами з обох сторін
-                ind=lst[start:].index(min_el)
-                ind+=start
+                ind = lst[start:].index(min_el)
+                ind += start
         lst[ind] = lst[start]
         lst[start] = min_el
         start += 1
