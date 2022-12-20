@@ -44,8 +44,8 @@ def merge_sort(lst):
     lst2 = lst[mid:]
     # Тут повертається значення для кожного виклику merge_sort
     # Краще явно напишіть куди потрапляє значення, що повертається
-    merge_sort(lst1)
-    merge_sort(lst2)
+    merge1 = merge_sort(lst1)
+    merge2 = merge_sort(lst2)
     first = 0
     second = 0
     index = 0
