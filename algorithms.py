@@ -18,11 +18,10 @@ def linear_search(list_of_values, value):
         return None
     # Заберіть звідси elif. Він повністю ламає логіку алгоритму лінійного пошуку.
     # Помістіть натомість return -1 (без жодних логічних конструкцій) в кінці функції
-    elif value not in list_of_values:
-        return -1
     for index, element in enumerate(list_of_values):
         if element == value:
             return index
+    return -1
 
 def merge_sort(lst):
     """
