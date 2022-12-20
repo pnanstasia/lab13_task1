@@ -1,5 +1,5 @@
 """
-Work with algorithms in functions
+Work with algorithms
 """
 
 def linear_search(list_of_values, value):
