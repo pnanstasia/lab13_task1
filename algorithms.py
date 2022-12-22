@@ -1,5 +1,5 @@
 """
-Work with algorithms in functions
+Work with algorithms
 """
 
 def linear_search(list_of_values, value):
@@ -16,11 +16,12 @@ def linear_search(list_of_values, value):
     """
     if not isinstance(list_of_values, list):
         return None
-    elif value not in list_of_values:
-        return -1
+    # Заберіть звідси elif. Він повністю ламає логіку алгоритму лінійного пошуку.
+    # Помістіть натомість return -1 (без жодних логічних конструкцій) в кінці функції
     for index, element in enumerate(list_of_values):
         if element == value:
             return index
+    return -1
 
 def merge_sort(lst):
     """
@@ -40,8 +41,10 @@ def merge_sort(lst):
     mid = len(lst) // 2
     lst1 = lst[:mid]
     lst2 = lst[mid:]
-    merge_sort(lst1)
-    merge_sort(lst2)
+    # Тут повертається значення для кожного виклику merge_sort
+    # Краще явно напишіть куди потрапляє значення, що повертається
+    merge1 = merge_sort(lst1)
+    merge2 = merge_sort(lst2)
     first = 0
     second = 0
     index = 0
@@ -106,8 +109,9 @@ def selection_sort(lst):
         for i in lst[start:]:
             if i <= min_el:
                 min_el = i
-                ind=lst[start:].index(min_el)
-                ind+=start
+                # Розділяйте оператори пробілами з обох сторін
+                ind = lst[start:].index(min_el)
+                ind += start
         lst[ind] = lst[start]
         lst[start] = min_el
         start += 1
@@ -131,5 +135,7 @@ def quick_sort(lst):
     main_elem = lst[int(len(lst)/2)]
     lefthand = list(filter(lambda x: x < main_elem, lst))
     righthand = list(filter(lambda x: x> main_elem, lst))
+    # У чому логіка цього рядка?
+    # Тут просто повертається значення main_elem
     median= [i for i in lst if i == main_elem]
     return quick_sort(lefthand)+ median + quick_sort(righthand)
